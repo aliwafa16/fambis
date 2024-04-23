@@ -4,7 +4,7 @@
         <div class="row g-5">
 
             <div class="col-lg-8" data-aos="fade-up" data-aos-delay="200">
-
+                <?php echo (!$blogs) ? '<h3 class="text-center">*--Artikel tidak ditemukan--*</h3>' : '' ?>
                 <div class="row gy-5 posts-list">
                     <?php foreach ($blogs as $key => $value) : ?>
                         <div class="col-lg-6">
@@ -69,7 +69,7 @@
                         <h3 class="sidebar-title">Categories</h3>
                         <ul class="mt-3">
                             <?php foreach ($category as $key => $value) : ?>
-                                <li><a href="<?= base_url('search?keywords=') . $value['category'] ?>"><?= $value['category'] ?> <span>(<?= $value['total_posts'] ?>)</span></a></li>
+                                <li><a href="<?= base_url('search?keywords=') . $value['category'] ?>"><?= $value['category'] ?> <span></span></a></li>
                             <?php endforeach; ?>
                         </ul>
                     </div><!-- End sidebar categories-->

@@ -5,41 +5,42 @@
         <div class="container">
             <div class="row gy-4">
                 <div class="col-lg-5 col-md-12 footer-info">
-                    <a href="index.html" class="logo d-flex align-items-center">
-                        <span><?= APP_NAME ?></span>
+                    <a href="<?= base_url() ?>" class="logo d-flex align-items-center">
+                        <span><?= $websettings['nama'] ?></span>
                     </a>
-                    <p>Cras fermentum odio eu feugiat lide par naso tierra. Justo eget nada terra videa magna derita valies darta donna mare fermentum iaculis eu non diam phasellus.</p>
+                    <p><?= $websettings['deskripsi_footer'] ?></p>
                     <div class="social-links d-flex  mt-3">
-                        <a href="#" class="twitter"><i class="bi bi-twitter"></i></a>
-                        <a href="#" class="facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="#" class="instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="#" class="linkedin"><i class="bi bi-linkedin"></i></a>
+                        <a href="<?= $websettings['twitter'] ?>" class="twitter"><i class="bi bi-twitter"></i></a>
+                        <a href="<?= $websettings['facebook'] ?>" class="facebook"><i class="bi bi-facebook"></i></a>
+                        <a href="<?= $websettings['instagram'] ?>" class="instagram"><i class="bi bi-instagram"></i></a>
+                        <a href="<?= $websettings['linkedin'] ?>" class="linkedin"><i class="bi bi-linkedin"></i></a>
                     </div>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Useful Links</h4>
                     <ul>
-                        <li><i class="bi bi-dash"></i> <a href="#">Home</a></li>
-                        <li><i class="bi bi-dash"></i> <a href="#">About us</a></li>
+                        <li><i class="bi bi-dash"></i> <a href="<?= base_url() ?>">Home</a></li>
+                        <li><i class="bi bi-dash"></i> <a href="<?= base_url('about') ?>">About us</a></li>
                     </ul>
                 </div>
 
                 <div class="col-lg-2 col-6 footer-links">
                     <h4>Category</h4>
+
                     <ul>
-                        <li><i class="bi bi-dash"></i> <a href="#">Family Business</a></li>
-                        <li><i class="bi bi-dash"></i> <a href="#">Knowledge and Innovation</a></li>
-                        <li><i class="bi bi-dash"></i> <a href="#">Organization Culture</a></li>
+                        <?php foreach ($category as $key => $value) : ?>
+                            <li><i class="bi bi-dash"></i> <a href="<?= base_url('search?keywords=') . $value['category'] ?>"><?= $value['category'] ?></a></li>
+                        <?php endforeach; ?>
                     </ul>
                 </div>
 
                 <div class="col-lg-3 col-md-12 footer-contact text-center text-md-start">
                     <h4>Contact Us</h4>
                     <p>
-                        Kampus Menara 165, Lantai 18 & 2, Jl. Tb. Simatupang Kav. 1, Cilandak Timur, Pasar Minggu, RT.3/RW.3, Cilandak Tim., Ps. Minggu, Kota Jakarta Selatan, Daerah Khusus Ibukota Jakarta 12560 <br>
-                        <strong>Phone:</strong>0812 3030 6165<br>
-                        <strong>Email:</strong>admin@esqbs.ac.id<br>
+                        <?= $websettings['alamat'] ?> <br>
+                        <strong>Phone:</strong><?= $websettings['no_hp'] ?><br>
+                        <strong>Email:</strong><?= $websettings['email'] ?><br>
                     </p>
 
                 </div>

@@ -18,6 +18,31 @@
                                 <span>Website Setting</span>
                             </a>
                         </li>
+                        <li class='sidebar-title'>Management About</li>
+                        <li class="sidebar-item <?= ($sidebar == 'management_about') ? 'active' : '' ?>">
+                            <a href="<?= base_url('management_about') ?>" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i>
+                                <span>Management About</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item <?= ($sidebar == 'services') ? 'active' : '' ?>">
+                            <a href="<?= base_url('services') ?>" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i>
+                                <span>Services</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item <?= ($sidebar == 'teams') ? 'active' : '' ?>">
+                            <a href="<?= base_url('teams') ?>" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i>
+                                <span>Teams</span>
+                            </a>
+                        </li>
+                        <li class="sidebar-item <?= ($sidebar == 'testimoni') ? 'active' : '' ?>">
+                            <a href="<?= base_url('testimoni') ?>" class='sidebar-link'>
+                                <i data-feather="home" width="20"></i>
+                                <span>Testimoni</span>
+                            </a>
+                        </li>
                         <li class='sidebar-title'>Management Blog</li>
                         <li class="sidebar-item <?= ($sidebar == 'blogs') ? 'active' : '' ?>">
                             <a href="<?= base_url('blogs') ?>" class='sidebar-link'>
