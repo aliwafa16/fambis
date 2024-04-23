@@ -8,8 +8,8 @@
                 <div class="card">
                     <div class="card-body">
                         <a href="<?= base_url('authors/tambah') ?>" class="btn btn-primary mb-2">Tambah</a>
-                        <a href="<?= base_url('authors/tambah') ?>" class="btn btn-warning mb-2">Export</a>
-                        <a href="<?= base_url('authors/tambah') ?>" class="btn btn-info mb-2">Import</a>
+                        <!-- <a href="<?= base_url('authors/tambah') ?>" class="btn btn-warning mb-2">Export</a>
+                        <a href="<?= base_url('authors/tambah') ?>" class="btn btn-info mb-2">Import</a> -->
                         <div class="table-responsive">
                             <table class='table table-striped' id="table-data">
                                 <thead>

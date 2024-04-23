@@ -22,8 +22,11 @@ class Auth extends MY_Controller
     public function index()
     {
         $data = [];
+        // Web settings
+        $data['websettings'] =  $this->db->get_where('setting_aplication', ['id' => 1])->row_array();
+        $data['about'] =  $this->db->get_where('about', ['id' => 1])->row_array();
         // $this->frontend_framework->view('vw_auth', $data);
-        $this->load->view('vw_auth');
+        $this->load->view('vw_auth', $data);
     }
 
     public function login()

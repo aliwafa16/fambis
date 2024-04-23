@@ -6,8 +6,8 @@
                 <div class="sidebar-menu">
                     <ul class="menu">
                         <li class='sidebar-title'>Main Menu</li>
-                        <li class="sidebar-item <?= ($title == 'Dashboard') ? 'active' : '' ?>">
-                            <a href="index.html" class='sidebar-link'>
+                        <li class="sidebar-item <?= ($sidebar == 'dashboard') ? 'active' : '' ?>">
+                            <a href="<?= base_url('dashboard') ?>" class='sidebar-link'>
                                 <i data-feather="home" width="20"></i>
                                 <span>Dashboard</span>
                             </a>
@@ -19,7 +19,7 @@
                             </a>
                         </li>
                         <li class='sidebar-title'>Management About</li>
-                        <li class="sidebar-item <?= ($sidebar == 'management_about') ? 'active' : '' ?>">
+                        <li class="sidebar-item <?= ($sidebar == 'management about') ? 'active' : '' ?>">
                             <a href="<?= base_url('management_about') ?>" class='sidebar-link'>
                                 <i data-feather="home" width="20"></i>
                                 <span>Management About</span>

@@ -3,6 +3,12 @@ defined('BASEPATH') or exit('No direct script access allowed');
 
 class Websettings extends MY_Controller
 {
+
+    public function __construct()
+    {
+        is_login();
+        parent::__construct();
+    }
     public function index()
     {
         $data = [

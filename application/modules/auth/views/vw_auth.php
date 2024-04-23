@@ -34,7 +34,7 @@
                     <div class="card pt-4">
                         <div class="card-body">
                             <div class="text-center mb-5">
-                                <img src="<?= ASSETS_URL ?>images/logo_blue.png" height="48" class='mb-4'>
+                                <img src="<?= base_url('assets/uploads/images/') . $about['images'] ?>" height="48" class='mb-4'>
                                 <h3>Sign In</h3>
                             </div>
                             <form method="POST" id="form_login" enctype="multipart/form-data">
@@ -50,9 +50,6 @@
                                 <div class="form-group position-relative has-icon-left">
                                     <div class="clearfix">
                                         <label for="password">Password</label>
-                                        <a href="auth-forgot-password.html" class='float-end'>
-                                            <small>Forgot password?</small>
-                                        </a>
                                     </div>
                                     <div class="position-relative">
                                         <input type="password" class="form-control" id="password" name="password">
@@ -66,9 +63,6 @@
                                     <div class="checkbox float-start">
                                         <input type="checkbox" id="checkbox1" class='form-check-input'>
                                         <label for="checkbox1">Remember me</label>
-                                    </div>
-                                    <div class="float-end">
-                                        <a href="auth-register.html">Don't have an account?</a>
                                     </div>
                                 </div>
                                 <div class="clearfix btn-login">

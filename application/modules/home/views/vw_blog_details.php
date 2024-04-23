@@ -75,7 +75,7 @@
                          <h3 class="sidebar-title">Categories</h3>
                          <ul class="mt-3">
                              <?php foreach ($category as $key => $value) : ?>
-                                 <li><a href="#"><?= $value['category'] ?> <span>(0)</span></a></li>
+                                 <li><a href="<?= base_url('search?keywords=') . $value['category'] ?>"><?= $value['category'] ?> <span>(<?= $value['total_posts'] ?>)</span></a></li>
                              <?php endforeach; ?>
                          </ul>
                      </div><!-- End sidebar categories-->

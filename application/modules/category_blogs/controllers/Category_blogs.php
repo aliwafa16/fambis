@@ -19,6 +19,12 @@ class Category_blogs extends MY_Controller
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+
+    public function __construct()
+    {
+        is_login();
+        parent::__construct();
+    }
     public function index()
     {
         $data = [

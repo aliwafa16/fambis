@@ -19,11 +19,17 @@ class Authors extends MY_Controller
      * map to /index.php/welcome/<method_name>
      * @see https://codeigniter.com/user_guide/general/urls.html
      */
+
+    public function __construct()
+    {
+        is_login();
+        parent::__construct();
+    }
     public function index()
     {
         $data = [
             'title' => 'Penulis',
-            'sidebar' => 'author'
+            'sidebar' => 'authors'
         ];
         $this->backend_framework->view('vw_authors', $data);
     }

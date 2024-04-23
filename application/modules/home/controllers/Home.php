@@ -55,7 +55,14 @@ class Home extends MY_Controller
         // $blogs = $this->db->get()->row_array();
 
 
-        $data['category'] = $this->db->get_where('category_posts', ['is_active' => 1])->result_array();
+        // $data['category'] = $this->db->get_where('category_posts', ['is_active' => 1])->result_array();
+        $this->db->select('category_posts.*, COUNT(posts.id) as total_posts');
+        $this->db->from('category_posts');
+        $this->db->join('posts', 'posts.category_id = category_posts.id', 'left');
+        $this->db->where('category_posts.is_active', 1);
+        $this->db->where('posts.is_active', 1);
+        $this->db->group_by('category_posts.id');
+        $data['category'] = $this->db->get()->result_array();
 
         // Web settings
         $data['websettings'] =  $this->db->get_where('setting_aplication', ['id' => 1])->row_array();
@@ -104,7 +111,13 @@ class Home extends MY_Controller
         $keyword = $this->input->get('keywords');
         $data = [];
 
-        $data['category'] = $this->db->get_where('category_posts', ['is_active' => 1])->result_array();
+        $this->db->select('category_posts.*, COUNT(posts.id) as total_posts');
+        $this->db->from('category_posts');
+        $this->db->join('posts', 'posts.category_id = category_posts.id', 'left');
+        $this->db->where('category_posts.is_active', 1);
+        $this->db->where('posts.is_active', 1);
+        $this->db->group_by('category_posts.id');
+        $data['category'] = $this->db->get()->result_array();
 
         // Web settings
         $data['websettings'] =  $this->db->get_where('setting_aplication', ['id' => 1])->row_array();
