@@ -25,6 +25,8 @@ class Management_about extends MY_Controller
         $response = [];
         // cek banner
         $dataOld = $this->db->get_where('about', ['id' => 1])->row_array();
+
+
         if ($_FILES['images']['name']) {
             $uploadImages = upload_image('images', 'images');
             $path = ASSETS_UPLOAD . 'images/' . $dataOld['images'];
@@ -33,8 +35,6 @@ class Management_about extends MY_Controller
         } else {
             $images = $dataOld['banner_hero'];
         }
-
-
 
         $data_update = [
             'images' => $images,

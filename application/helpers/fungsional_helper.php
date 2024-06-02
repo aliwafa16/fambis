@@ -54,7 +54,7 @@ if (!function_exists('upload_image')) {
         $ci_instance->load->library('session');
 
         $config['upload_path']          = './assets/uploads/'.$path;
-        $config['allowed_types']        = 'gif|jpg|png';
+        $config['allowed_types']        = 'gif|jpg|png|jpeg';
         $config['max_size']             = 2000; // maksimum ukuran file dalam kilobit
         $config['file_name']            = date('ymdhis');
 

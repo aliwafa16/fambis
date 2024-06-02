@@ -15,8 +15,10 @@
                         <div class="col-md-3">
                             <div class="form-group">
                                 <label>Image</label>
-                                <input type="file" class="form-control" placeholder="Nama website" id="first-name-icon" name="images" required value="">
+                                <input type="file" class="form-control" placeholder="Nama website" id="first-name-icon" name="images">
+                                <small class="text-danger">.gif, .png, .jpg</small>
                                 <img src="<?= base_url('assets/uploads/images/') . $data['images'] ?>" alt="" class="img-fluid mt-2">
+
                             </div>
                         </div>
                         <div class="col-md-9">
